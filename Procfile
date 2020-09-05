@@ -1,1 +1,1 @@
-web : node .\mailer.js
+web : nodemon ./mailer.js
