@@ -1,7 +1,6 @@
 const nodemailer = require('nodemailer');
 const express = require('express')
 const bodyParser = require('body-parser');
-const ejs = require('ejs');
 const {
     response
 } = require('express');
@@ -10,7 +9,6 @@ const app = express();
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-app.set('view engine', 'ejs');
 
 app.get('/',(req,res)=>{
     res.send({msg:'This has to be used as a third party API. We currently do not have support for the first hand use'});
