@@ -12,7 +12,9 @@ app.use(bodyParser.urlencoded({
 }));
 app.set('view engine', 'ejs');
 
-
+app.get('/',(req,res)=>{
+    res.send({msg:'This has to be used as a third party API. We currently do not have support for the first hand use'});
+})
 app.route('/send-mail').post((req, res) => {
         const service = req.query.service;
         const fromMail = req.query.email;
