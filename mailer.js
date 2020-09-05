@@ -48,8 +48,9 @@ app.route('/send-mail').post((req, res) => {
         })
     })
 
-
-app.listen(3000, (err) =>{
-    if(err)
-        console.log(err)
+let port = process.env.PORT;
+if (port == null || port == "")
+    port = 3000
+app.listen(port, function () { // Start the server
+    console.log("Server Listening to port");
 });
