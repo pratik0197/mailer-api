@@ -47,4 +47,7 @@ app.route('/send-mail').post((req, res) => {
     })
 
 
-app.listen(3000, (err) => console.log(err));
+app.listen(3000, (err) =>{
+    if(err)
+        console.log(err)
+});
